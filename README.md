@@ -35,6 +35,9 @@ Run the app triage on its own:
 ideviceinstaller list --user --xml | python3 scripts/apptriage.py
 ```
 
+See [`docs/example-output.md`](docs/example-output.md) for a sanitized sample run
+and how to read the risk ranking.
+
 ## Using it as a Claude Skill
 Drop this folder into your skills directory (e.g.
 `~/.claude/skills/ios-usb-security-audit/`). Claude loads [`SKILL.md`](SKILL.md)
