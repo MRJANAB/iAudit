@@ -38,6 +38,10 @@ ideviceinstaller list --user --xml | python3 scripts/apptriage.py
 See [`docs/example-output.md`](docs/example-output.md) for a sanitized sample run
 and how to read the risk ranking.
 
+📋 **[CHEATSHEET.md](CHEATSHEET.md)** — one-page reference: install options, what you
+can do/fix over USB, storage keep-vs-delete, networking & traffic capture (app IN &
+OUT), DNS/proxy/firewall checks, and bundle-ID red flags.
+
 ## Using it as a Claude Skill
 Drop this folder into your skills directory (e.g.
 `~/.claude/skills/ios-usb-security-audit/`). Claude loads [`SKILL.md`](SKILL.md)
