@@ -1,9 +1,16 @@
-# ios-usb-security-audit
+# iAudit
 
-A **Claude Code / Agent Skill** (and standalone CLI scripts) to security- and
-storage-audit a **USB-connected iPhone or iPad from a Mac or Linux host — without a
-jailbreak**, using the open-source [libimobiledevice](https://libimobiledevice.org)
-suite.
+**Plug your iPhone into your Mac and find out which apps are quietly spying on you — no jailbreak needed.**
+
+iAudit is a **Claude Code / Agent Skill** (and standalone CLI scripts) that security-
+and storage-audits a **USB-connected iPhone or iPad from a Mac or Linux host — without
+a jailbreak** — using the open-source [libimobiledevice](https://libimobiledevice.org)
+suite. It rats out the ad-laden "free utility" apps, flags the ones shipping your data
+over cleartext HTTP, and tells you exactly what's safe to delete.
+
+> Real example: a "Network Scanner" app whose bundle ID was literally
+> `com.spycamera.app`, asking for camera access "for a colored filter." iAudit flags
+> that in one command.
 
 It talks to Apple's own lockdown / AFC / installation services, so it works on
 current iOS. It is confined to what those services expose (app **metadata**, not
@@ -20,6 +27,9 @@ sandbox contents) — see [`references/capabilities.md`](references/capabilities
 
 ## Quick start
 ```bash
+# 0. Get it
+git clone https://github.com/MRJANAB/iAudit && cd iAudit
+
 # 1. Install the toolchain (macOS/Homebrew or Debian/apt)
 bash scripts/setup.sh
 
@@ -43,10 +53,12 @@ can do/fix over USB, storage keep-vs-delete, networking & traffic capture (app I
 OUT), DNS/proxy/firewall checks, and bundle-ID red flags.
 
 ## Using it as a Claude Skill
-Drop this folder into your skills directory (e.g.
-`~/.claude/skills/ios-usb-security-audit/`). Claude loads [`SKILL.md`](SKILL.md)
-and runs the workflow when you ask it to "security-check / audit my connected
-iPhone". It requires nothing but the scripts here plus `libimobiledevice`.
+```bash
+git clone https://github.com/MRJANAB/iAudit ~/.claude/skills/iaudit
+```
+Claude loads [`SKILL.md`](SKILL.md) and runs the workflow when you ask it to
+"security-check / audit my connected iPhone". It requires nothing but the scripts
+here plus `libimobiledevice`.
 
 ## Requirements
 - macOS (Homebrew) or Linux (apt); Python 3.6+ (standard library only).

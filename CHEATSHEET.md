@@ -17,7 +17,7 @@ storage keep-vs-delete, networking/traffic (app IN & OUT), and bundle-ID checks.
 | **Homebrew** (macOS) | `brew install libimobiledevice ideviceinstaller` (optionally `mitmproxy`) |
 | **apt** (Debian/Ubuntu) | `sudo apt install libimobiledevice-utils ideviceinstaller usbmuxd` |
 | **This repo's installer** | `git clone … && bash scripts/setup.sh` |
-| **As a Claude Skill** | `git clone … ~/.claude/skills/ios-usb-security-audit` — Claude loads `SKILL.md` and runs the workflow on request |
+| **As a Claude Skill** | `git clone … ~/.claude/skills/iaudit` — Claude loads `SKILL.md` and runs the workflow on request |
 
 > Note: this is packaged as a **Skill + CLI**, not an MCP server. The scripts are
 > plain CLI, so they can be wrapped in an MCP server later if you want tool-call

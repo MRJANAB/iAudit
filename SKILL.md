@@ -1,5 +1,5 @@
 ---
-name: ios-usb-security-audit
+name: iaudit
 description: >-
   Audit a USB-connected iPhone or iPad from a Mac or Linux host for security and
   storage issues WITHOUT a jailbreak, using libimobiledevice. Enumerate installed
@@ -11,7 +11,7 @@ description: >-
   user owns or is authorized to test.
 ---
 
-# iOS USB Security Audit
+# iAudit — iOS USB Security Audit
 
 Audit an iPhone/iPad connected over USB from a Mac or Linux machine — no jailbreak
 required. Everything here uses Apple's own lockdown/AFC/installation services via
